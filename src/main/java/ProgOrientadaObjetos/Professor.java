@@ -1,7 +1,7 @@
 package ProgOrientadaObjetos;
 
 // classe
-public class Curso {
+public class Professor {
 
     // atributos
     

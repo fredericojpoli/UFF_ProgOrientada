@@ -7,5 +7,6 @@ public class Participacao {
     Aluno aluno;
     Curso curso;
     double cr;
+    int matricula;
 
 }
