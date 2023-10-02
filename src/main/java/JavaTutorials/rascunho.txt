@@ -1,19 +1,22 @@
 blog - nome (string)
      - numero de usuarios (inteiro)
-     - vetor de usuarios (usuarios)
      - numero de postagens (inteiro) 
      - vetor de postagens (notas)
-     * login
-     * cadastro
-     *
+     * imprimir blog
 
 pessoa - nome (String)
        - email (string)
        - senha (string)
        - adm (bool)
 
-  usuario - vetor de postagens (notas)
+  usuario - vetor de blogs favs (blog)
           - vetor de comentarios (comentario)
+          * autenticar email
+          * favoritar blog
+          * criar postagem
+          * criar blog
+          * curtir comentario
+          * curtir comentario
 
 conteudo - autor (usuario)
          - data de criação (data)
@@ -21,6 +24,8 @@ conteudo - autor (usuario)
         
   notas - titulo (string)
         - vetor de comentarios (comentario)
+        * imprimir post
+        * imprimir comentarios
 
   comentários - curtidas (inteiro)
-
+              
