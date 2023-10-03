@@ -1,4 +1,4 @@
-package uff.ic.lleme.tcc00328.exercicios.BeatrizPiedade;
+package uff.ic.lleme.tcc00328.exercicios.BeatrizPiedade.Exercicio03;
 
 import java.util.*;
 

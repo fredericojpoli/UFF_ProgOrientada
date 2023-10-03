@@ -1,4 +1,4 @@
-package uff.ic.lleme.tcc00328.exercicios.BeatrizPiedade;
+package uff.ic.lleme.tcc00328.exercicios.BeatrizPiedade.Exercicio01;
 
 import java.io.*;
 import java.util.*;
@@ -8,7 +8,7 @@ public class Exercicio01 {
     public static void criaArquivo(int N) throws FileNotFoundException, IOException {
         // criando arquivo
         // declarando variável para gerar números
-        BufferedWriter gravador = new BufferedWriter(new FileWriter("src/main/java/uff/ic/lleme/tcc00328/exercicios/BeatrizPiedade/numAleatorios.txt"));
+        BufferedWriter gravador = new BufferedWriter(new FileWriter("src/main/java/uff/ic/lleme/tcc00328/exercicios/BeatrizPiedade/Exercicio01/numAleatorios.txt"));
         Random gerador = new Random();
         
         // preenchendo arquivo
@@ -22,7 +22,7 @@ public class Exercicio01 {
 
     public static void calculaHistograma(int N) throws FileNotFoundException, IOException {
         // abrindo arquivo
-        BufferedReader leitor = new BufferedReader(new FileReader("src/main/java/uff/ic/lleme/tcc00328/exercicios/BeatrizPiedade/numAleatorios.txt"));
+        BufferedReader leitor = new BufferedReader(new FileReader("src/main/java/uff/ic/lleme/tcc00328/exercicios/BeatrizPiedade/Exercicio01/numAleatorios.txt"));
         
         int[] frequencia = new int[100];
         // criando e preenchendo o vetor com s ocorrências dos números

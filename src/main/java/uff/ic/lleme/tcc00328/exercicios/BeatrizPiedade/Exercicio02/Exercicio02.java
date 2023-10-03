@@ -1,4 +1,4 @@
-package uff.ic.lleme.tcc00328.exercicios.BeatrizPiedade;
+package uff.ic.lleme.tcc00328.exercicios.BeatrizPiedade.Exercicio02;
 
 import java.util.*;
 import java.io.*;
@@ -25,7 +25,7 @@ public class Exercicio02 {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         // abrindo o arquivo
-        BufferedReader leitor = new BufferedReader(new FileReader("src/main/java/uff/ic/lleme/tcc00328/exercicios/BeatrizPiedade/campeonato.txt"));
+        BufferedReader leitor = new BufferedReader(new FileReader("src/main/java/uff/ic/lleme/tcc00328/exercicios/BeatrizPiedade/Exercicio02/campeonato.txt"));
         String linha;
         String[] numeros;
         

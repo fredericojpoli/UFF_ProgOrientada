@@ -1,4 +1,4 @@
-package uff.ic.lleme.tcc00328.exercicios.BeatrizPiedade;
+package uff.ic.lleme.tcc00328.exercicios.BeatrizPiedade.Exercicio04;
 
 public class Exercicio04 {
     
