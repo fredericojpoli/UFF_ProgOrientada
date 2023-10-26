@@ -1,4 +1,4 @@
-package ProgOrientadaObjetos.Exercício02;
+package Provas.P1;
 
 public class Prato {
     private String nome;
@@ -10,15 +10,6 @@ public class Prato {
         this.preco = preco;
     }
     
-    /* alteração */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-    
     /* acesso */
     public String getNome() {
         return nome;
@@ -26,5 +17,10 @@ public class Prato {
     
     public double getPreco() {
         return preco;
+    }
+    
+    /* auxiliar para impressão do cardápio */
+    public String descricao() {
+        return (nome + " R$" + preco);
     }
 }

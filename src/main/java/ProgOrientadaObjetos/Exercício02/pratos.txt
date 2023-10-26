@@ -1,8 +1,0 @@
-Macarrão;25.00
-Batata Frita;32.00
-Peixe Ensopado;15.00
-Frango Empanado;26.00
-Guaravita;2.50
-Coca-Cola;6.50
-Cerveja;9.00
-Água;3.00

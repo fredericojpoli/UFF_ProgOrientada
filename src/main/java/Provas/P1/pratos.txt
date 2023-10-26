@@ -1,0 +1,7 @@
+pratoA;10.50
+pratoB;25.00
+pratoC;30.99
+pratoD;5.00
+pratoE;45.00
+pratoF;13.45
+pratoG;2.50

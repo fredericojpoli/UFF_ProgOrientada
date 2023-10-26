@@ -1,9 +1,0 @@
-Helo;Macarrão;1
-Helo;Guaravita;2
-Bea;Batata Frita;2
-Sophia;Batata Frita;1
-Manu;Peixe Ensopado;1
-Bea;Frango Empanado;1
-Helo;Coca-Cola;2
-Manu;Cerveja;3
-Sophia;Água;5

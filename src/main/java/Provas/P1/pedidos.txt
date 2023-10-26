@@ -1,0 +1,7 @@
+clienteA;pratoF;5
+clienteB;pratoA;2
+clienteC;pratoB;1
+clienteB;pratoD;4
+clienteD;pratoE;3
+clienteA;pratoC;1
+clienteC;pratoB;1

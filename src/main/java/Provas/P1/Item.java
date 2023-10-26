@@ -1,21 +1,12 @@
-package ProgOrientadaObjetos.Exercício02;
+package Provas.P1;
 
 public class Item {
     private Prato prato;
     private int quantidade;
     
     /* construção */
-    public Item(Prato prato, int quantidade) {
-        this.prato = prato;
-        this.quantidade = quantidade;
-    }
-    
-    /* alteração */
-    public void setPrato(Prato prato) {
-        this.prato = prato;
-    }
-    
-    public void setQuantidade(int quantidade) {
+    public Item(String prato, int quantidade) {
+        this.prato = Controle.findPrato(prato);
         this.quantidade = quantidade;
     }
     
@@ -28,7 +19,12 @@ public class Item {
         return quantidade;
     }
     
-    public double getValorTotal() {
+    public double getTotal() {
         return (prato.getPreco() * quantidade);
+    }
+    
+    /* auxiliar para impressão do cardápio */
+    public String descricao() {
+        return (prato.descricao() + " " + quantidade + "UND");
     }
 }
