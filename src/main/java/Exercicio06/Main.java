@@ -27,6 +27,5 @@ public class Main {
         System.out.println();
         
         /* 4) Calcular valor da expressão */
-        
     }
 }
