@@ -11,7 +11,7 @@ public class ClassificaConstante implements ClassificaParticula {
     }
     
     @Override
-    public Particula classificar(String particula) {
+    public Particula classifica(String particula) {
         return (new Numero(particula, Double.parseDouble(particula)));
     }
     

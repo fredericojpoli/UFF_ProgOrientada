@@ -1,7 +1,6 @@
 package Exercicio06.SelecionaOperacao;
 
-import Exercicio06.Modelo.*;
-import Exercicio06.Visitor.*;
+import Exercicio06.Modelo.Operacoes.*;
 
 public class SelecionaSubtracao implements SelecionaOperacao {
     
@@ -12,15 +11,12 @@ public class SelecionaSubtracao implements SelecionaOperacao {
     }
     
     @Override
-    public Numero seleciona(Operador operador, Numero numA, Numero numB) {
-        if (operador.getNome().equals("-")) {
-            Calculadora calculadora = new Calculadora();
-            Subtracao operacao = new Subtracao(numA, numB);
-            return calculadora.visit(operacao);
-        }
+    public Operacao seleciona(String nome) {
+        if (nome.equals("-"))
+            return (new Subtracao());
         
         if (proximo != null)
-            return proximo.seleciona(operador, numA, numB);
+            return proximo.seleciona(nome);
         
         return null;
         

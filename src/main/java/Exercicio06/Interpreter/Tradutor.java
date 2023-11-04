@@ -1,36 +1,24 @@
 package Exercicio06.Interpreter;
 
-import Exercicio06.ClassificaParticula.ClassificaParticula;
-import Exercicio06.ClassificaParticula.ClassificaVariavel;
-import Exercicio06.ClassificaParticula.ClassificaConstante;
-import Exercicio06.ClassificaParticula.ClassificaOperador;
+import Exercicio06.ClassificaParticula.*;
 import Exercicio06.Modelo.*;
 
 public abstract class Tradutor {
     
-    public static Pilha traduz(String expressao) {
-        
-        String particula[] = expressao.split(" ");
-        int tamanho = particula.length;
-        
-        Pilha topo = criaNoh(particula[tamanho-1]);
-        Pilha aux = topo;
-        
-        for (int i = tamanho-2; i >= 0; i--) {
-            aux.proximo = criaNoh(particula[i]);
-            aux = aux.proximo;
-        }
-        
-        return topo;
-    }
-    
-    public static Pilha criaNoh(String particula) {
+    public static Arvore traduz(String[] expressao, int indx) {
+
         ClassificaParticula classificador = new ClassificaVariavel(new ClassificaOperador(new ClassificaConstante(null)));
-        
-        Pilha novo = new Pilha();
-        novo.info = classificador.classificar(particula);
-        
-        return novo;
+
+        Arvore novoNoh = new Arvore();
+        novoNoh.conteudo = classificador.classifica(expressao[indx]);
+
+        if (novoNoh.conteudo.getClass() == Operador.class) {
+            novoNoh.direita = traduz(expressao, indx-1);
+            novoNoh.esquerda = traduz(expressao, indx-2);
+        }
+            
+        return novoNoh;
+
     }
     
 }

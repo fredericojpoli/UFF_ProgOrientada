@@ -8,6 +8,6 @@ Termina quando ele retorna um numero ou um operador = Termina quando alguém tra
 */
 public interface ClassificaParticula {
     
-    public Particula classificar(String particula);
+    public Particula classifica(String particula);
     
 }

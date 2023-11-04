@@ -19,14 +19,14 @@ public class Main {
         
         /* 1) Transformar um string em uma representação orientada a objetos da expressão */
         String linha = "2 _a * _b + _b *";
-        Pilha expressao = Tradutor.traduz(linha);
+        String expressao[] = linha.split(" ");
+        Arvore npr = Tradutor.traduz(expressao, expressao.length - 1);
                 
-        /* "2 _a * _b + _b *" == _b * (_b + (_a * 2)) */
-        Janela.printPilha(expressao);
+        /* "2 _a * _b + _b *" == ((2 * _a ) + _b) * _b */
+        Janela.printArvore(npr);
         System.out.println();
         
         /* 4) Calcular valor da expressão */
-        Numero resultado = NotacaoPolonesa.calcula(expressao);
-        System.out.println(resultado.getValor());
+        
     }
 }

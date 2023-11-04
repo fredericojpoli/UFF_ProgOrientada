@@ -1,5 +1,6 @@
 package Exercicio06.Visitor;
 
+import Exercicio06.Modelo.Operacoes.*;
 import Exercicio06.Modelo.*;
 
 public class Calculadora implements Visitor {
@@ -54,6 +55,11 @@ public class Calculadora implements Visitor {
         Numero resultado = new Numero(Double.toString(valor), valor);
         
         return resultado;
+    }
+
+    @Override
+    public Numero visit(Particula valor) {
+        return ((Numero) valor);
     }
 
 }

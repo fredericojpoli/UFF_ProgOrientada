@@ -4,10 +4,11 @@ import Exercicio06.Modelo.*;
 
 public abstract class Janela {
     
-    public static void printPilha(Pilha equacao) {
+    public static void printArvore(Arvore equacao) {
         if (equacao != null) {
-            System.out.print(equacao.info.getNome() + " ");
-            printPilha(equacao.proximo);
+            printArvore(equacao.esquerda);
+            System.out.print(" " + equacao.conteudo.getNome() + " ");
+            printArvore(equacao.direita);
         }
     } 
     

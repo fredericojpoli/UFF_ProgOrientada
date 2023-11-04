@@ -12,12 +12,12 @@ public class ClassificaVariavel implements ClassificaParticula {
     }
     
     @Override
-    public Particula classificar(String particula) {
+    public Particula classifica(String particula) {
         if (particula.startsWith("_")) 
             return Controle.buscaVariavel(particula);
         
         if (proximo != null)
-            return proximo.classificar(particula);
+            return proximo.classifica(particula);
         
         return null;
         
