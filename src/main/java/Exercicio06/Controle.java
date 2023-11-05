@@ -37,7 +37,14 @@ public class Controle {
         return null;
     }
     
-    public static void AlteraVariavel(String variavel, Double valor){
+    public static void listaVariaveis(){
+        System.out.println("Variáveis:");
+         for(int i = 0; i< Main.listaVariaveis.size(); i++){
+             System.out.printf("%d: %s\n",(i+1) ,Main.listaVariaveis.get(i).getNome());
+         }
+    }
+    
+    public static void alteraVariavel(String variavel, Double valor){
         for(int i = 0; i< Main.listaVariaveis.size(); i++){
             if(Main.listaVariaveis.get(i).getNome().equals(variavel)){
                 Numero num = Main.listaVariaveis.get(i);

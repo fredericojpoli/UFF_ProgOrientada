@@ -34,16 +34,17 @@ public class Main {
 
         
         /* Alteramos variaveis e o Observador faz o resultado ser recalculado. */
-        Controle.AlteraVariavel("_a", 10.0);
+        Controle.alteraVariavel("_a", 10.0);
         /*_c não está na expressao*/
-        Controle.AlteraVariavel("_c", 100.0);
+        Controle.alteraVariavel("_c", 100.0);
         
         /*Alteramos a expressao e as variaveis*/
         Controle.setExpressao("2 _c * _a + _a *");
         Controle.inicializa("_c", 0.0);
+        Controle.listaVariaveis();
         
-        Controle.AlteraVariavel("_b", 4.0);
-        Controle.AlteraVariavel("_a", 5.0);
-        Controle.AlteraVariavel("_c", 0.0);
+        Controle.alteraVariavel("_b", 4.0);
+        Controle.alteraVariavel("_a", 5.0);
+        Controle.alteraVariavel("_c", 0.0);
     }
 }
