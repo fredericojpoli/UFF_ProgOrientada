@@ -40,6 +40,7 @@ public class Main {
         
         /*Alteramos a expressao e as variaveis*/
         Controle.setExpressao("2 _c * _a + _a *");
+        Controle.inicializa("_c", 0.0);
         
         Controle.AlteraVariavel("_b", 4.0);
         Controle.AlteraVariavel("_a", 5.0);
