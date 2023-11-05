@@ -13,6 +13,7 @@ public class VariavelHandler implements HandlerA {
     
     @Override
     public Particula classifica(String particula) {
+        // Se começa com "_", busca na lista de variáveis existentess 
         if (particula.startsWith("_")) 
             return Controle.buscaVariavel(particula);
         

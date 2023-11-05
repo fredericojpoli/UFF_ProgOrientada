@@ -4,9 +4,11 @@ import Exercicio06.Visitor.*;
 
 public class OperadorMultiplicacao extends Operador implements Visitable {
 
-    public OperadorMultiplicacao(String nome) {
-        super(nome);
+    public OperadorMultiplicacao(Operador operador) {
+        super("*");
+        this.setFatores(operador.fatorA, operador.fatorB);
     }
+    
     
     @Override
     public Numero accept(Visitor visitor) {

@@ -2,13 +2,14 @@ package Exercicio06.Interpreter;
 
 import Exercicio06.Modelo.*;
 import Exercicio06.HandlerA.*;
+import Exercicio06.Janela;
 import Exercicio06.Visitor.*;
 
 public abstract class NPR {
     
     public static Arvore traduz(String[] expressao, int indx) {
 
-        /* Chain Of Responsability */
+        // Chain Of Responsability: HandlerA/HandlerA.java
         HandlerA classificador = new VariavelHandler(new OperadorHandler(new ConstanteHandler(null)));
 
         Arvore novoNoh = new Arvore();
@@ -25,22 +26,32 @@ public abstract class NPR {
     }
     
     public static Numero calcula(Arvore expressao) {
-        /*
+        
         // Não terminal
         if (expressao.conteudo.getClass() != Numero.class) {
-            Numero fatorA = calcula(expressao.esquerda);
-            Numero fatorB = calcula(expressao.direita);
-            
             Calculadora calculadora = new Calculadora();
             
-            // pra eu acessar o set fatores preciso transformar em operacao pq não é atributo de particula
-            Operador operador = (Operador) expressao.conteudo; 
-            operador.setFatores(fatorA, fatorB);
+            // o conteudo dos filhos passa a ser o resultado (pra atualizar a arvore)
+            expressao.esquerda.conteudo = calcula(expressao.esquerda);
+            expressao.direita.conteudo = calcula(expressao.direita);
             
-            // pra visitar precisava ser explicitamente do tipo OperadorTipo mas não rola pq é do tipo Operador
-            return calculadora.visit(operador);
+            Operador operador = (Operador) expressao.conteudo;
+            operador.setFatores((Numero) expressao.esquerda.conteudo, (Numero) expressao.direita.conteudo);
             
-        } */
+            // se eu não fizer isso, o visitor lê como um Operador
+            switch (operador.getNome()) {
+                case "+":
+                   return calculadora.visit(new OperadorAdicao(operador));
+                case "/":
+                   return calculadora.visit(new OperadorDivisao(operador));
+                case "*":
+                   return calculadora.visit(new OperadorMultiplicacao(operador));
+                case "^":
+                   return calculadora.visit(new OperadorPotenciacao(operador));
+                case "-":
+                   return calculadora.visit(new OperadorSubtracao(operador));
+            }
+        } 
         
         // Terminal
         return ((Numero) expressao.conteudo);

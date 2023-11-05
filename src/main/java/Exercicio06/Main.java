@@ -20,14 +20,20 @@ public class Main {
         /* 1) Transformar um string em uma representação orientada a objetos da expressão */
         String linha = "2 _a * _b + _b *";
         String expressao[] = linha.split(" ");
-        Arvore npr = NPR.traduz(expressao, expressao.length - 1);
+        Arvore npr = NPR.traduz(expressao, expressao.length - 1); // Interpreter/NPR.java
                 
         /* (2 _a * _b + _b *) == ((2 * _a ) + _b) * _b */
         Janela.printArvore(npr);
         System.out.println();
         
         /* 4) Calcular valor da expressão */
-        /*Numero resultado = NPR.calcula(npr);
-        System.out.println(resultado.getValor());*/
+        /* 
+        ((2 * _a ) + _b) * _b 
+        ((2 * 5 ) + 2) * 2 
+        (10 + 2) * 2 
+        (12) * 2 = 24
+        */
+        Numero resultado = NPR.calcula(npr); // Interpreter/NPR.java
+        System.out.println(resultado.getValor());
     }
 }

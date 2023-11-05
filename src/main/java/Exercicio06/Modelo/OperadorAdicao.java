@@ -1,13 +1,14 @@
 package Exercicio06.Modelo;
 
-import Exercicio06.Modelo.*;
 import Exercicio06.Visitor.*;
 
 public class OperadorAdicao extends Operador implements Visitable {
 
-    public OperadorAdicao(String nome) {
-        super(nome);
+    public OperadorAdicao(Operador operador) {
+        super("+");
+        this.setFatores(operador.fatorA, operador.fatorB);
     }
+    
     
     @Override
     public Numero accept(Visitor visitor) {

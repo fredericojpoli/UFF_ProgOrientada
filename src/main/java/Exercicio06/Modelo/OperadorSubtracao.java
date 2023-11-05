@@ -4,8 +4,9 @@ import Exercicio06.Visitor.*;
 
 public class OperadorSubtracao extends Operador implements Visitable {
 
-    public OperadorSubtracao(String nome) {
-        super(nome);
+    public OperadorSubtracao(Operador operador) {
+        super("-");
+        this.setFatores(operador.fatorA, operador.fatorB);
     }
     
     @Override

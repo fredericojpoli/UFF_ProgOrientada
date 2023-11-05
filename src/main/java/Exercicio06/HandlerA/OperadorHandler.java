@@ -1,6 +1,5 @@
 package Exercicio06.HandlerA;
 
-import Exercicio06.HandlerA.HandlerB.*;
 import Exercicio06.Modelo.*;
 
 public class OperadorHandler implements HandlerA {
@@ -13,10 +12,9 @@ public class OperadorHandler implements HandlerA {
     
     @Override
     public Particula classifica(String particula) {
+        // Se é um sinal, descubre o tipo de sinal
         if (particula.equals("+") || particula.equals("-") || particula.equals("*") || particula.equals("/") || particula.equals("^")) {
-            HandlerB classificador = new AdicaoHandler(new DivisaoHandler(new MultiplicacaoHandler(new PotenciacaoHandler(new SubtracaoHandler(null)))));
-            Operador novo = classificador.classifica(particula);
-            return novo;
+            return (new Operador(particula));
         }
         
         if (proximo != null)

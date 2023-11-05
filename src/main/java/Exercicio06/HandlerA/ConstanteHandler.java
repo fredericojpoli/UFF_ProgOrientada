@@ -12,6 +12,7 @@ public class ConstanteHandler implements HandlerA {
     
     @Override
     public Particula classifica(String particula) {
+        // É o último tipo de particula
         return (new Numero(particula, Double.parseDouble(particula)));
     }
     

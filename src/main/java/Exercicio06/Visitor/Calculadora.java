@@ -3,7 +3,7 @@ package Exercicio06.Visitor;
 import Exercicio06.Modelo.*;
 
 public class Calculadora implements Visitor {
-
+    
     @Override
     public Numero visit(OperadorAdicao expressao) {
         double valor = expressao.fatorA.getValor() + expressao.fatorB.getValor();

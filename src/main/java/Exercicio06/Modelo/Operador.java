@@ -1,7 +1,5 @@
 package Exercicio06.Modelo;
 
-import Exercicio06.Visitor.*;
-
 public class Operador extends Particula {
     
     public Numero fatorA;
@@ -11,8 +9,8 @@ public class Operador extends Particula {
         super(nome);
     }
 
-    public void setFatores(Numero fatorA, Numero fatorB) {
-        this.fatorA = fatorA;
-        this.fatorB = fatorB;
+    public void setFatores(Numero A, Numero B) {
+        this.fatorA = A;
+        this.fatorB = B;
     }
 }
