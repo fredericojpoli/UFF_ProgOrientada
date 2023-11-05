@@ -8,6 +8,7 @@ uff\ic\lleme\tcc00328\exercicios\BeatrizPiedade\Exercicio05\Modelo\Conteudo.clas
 Provas\P1\Pedido.class
 uff\ic\lleme\tcc00328\exercicios\BeatrizPiedade\Exercicio05\Modelo\Nota.class
 Estruturas\Arvore\ArvoreBinaria.class
+Exercicio06\Observers\NumeroObserver.class
 Exercicio06\Modelo\Numero.class
 Provas\P1\Controle.class
 uff\ic\lleme\tcc00328\exercicios\BeatrizPiedade\Exercicio05\Modelo\Usuario.class
@@ -21,11 +22,13 @@ Provas\P1\Prato.class
 Exercicio06\Modelo\Operador.class
 uff\ic\lleme\tcc00328\exercicios\BeatrizPiedade\Exercicio04\Dado.class
 Exercicio06\Controle.class
+Exercicio06\Observers\OObserver.class
 Exercicio06\Visitor\Visitable.class
 Exercicio06\Interpreter\NPR.class
 Estruturas\Arvore\Main.class
 Exercicio06\Interpreter\Arvore.class
 Exercicio06\Modelo\OperadorSubtracao.class
+Exercicio06\Observers\OperadorObserver.class
 uff\ic\lleme\tcc00328\exercicios\BeatrizPiedade\Exercicio03\Exercicio03.class
 Exercicio06\Janela.class
 uff\ic\lleme\tcc00328\exercicios\BeatrizPiedade\Exercicio05\Janela.class
@@ -38,5 +41,6 @@ Exercicio06\Visitor\Visitor.class
 uff\ic\lleme\tcc00328\exercicios\BeatrizPiedade\Exercicio05\Modelo\Blog.class
 Exercicio06\Main.class
 Estruturas\Arvore\Controle.class
+Exercicio06\Observers\NObserver.class
 uff\ic\lleme\tcc00328\exercicios\BeatrizPiedade\Exercicio04\Cramps.class
 Exercicio06\Modelo\Particula.class

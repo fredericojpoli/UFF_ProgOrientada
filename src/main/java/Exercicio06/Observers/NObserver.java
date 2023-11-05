@@ -18,6 +18,6 @@ public class NObserver implements NumeroObserver {
     }
     @Override
     public void atualiza(){
-        System.out.printf("%s teve seu valor alterado para %.2f", observado.getNome(), observado.getValor() );
+        System.out.printf("%s teve seu valor alterado!", observado.getNome(), observado.getValor() );
     }
 }
