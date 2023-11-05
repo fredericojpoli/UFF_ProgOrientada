@@ -20,4 +20,14 @@ public class Controle {
         return null;
     }
     
+    public static void AlteraVariavel(String variavel, Double valor){
+        for(int i = 0; i< Main.listaVariaveis.size(); i++){
+            if(Main.listaVariaveis.get(i).getNome().equals(variavel)){
+                Numero num = Main.listaVariaveis.get(i);
+                num.setValor(valor);
+                Main.listaVariaveis.set(i, num);
+            }
+        }
+    }
+    
 }

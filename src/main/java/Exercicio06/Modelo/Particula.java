@@ -1,8 +1,8 @@
 package Exercicio06.Modelo;
 
 public class Particula {
-    
-    private String nome;
+ 
+    String nome;
     
     public Particula(String nome) {
         this.nome = nome;
@@ -11,4 +11,12 @@ public class Particula {
     public String getNome() {
         return nome;
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+        
+    }
+    
 }
+
+    
