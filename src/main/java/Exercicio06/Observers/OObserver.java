@@ -18,7 +18,7 @@ public class OObserver implements OperadorObserver {
     }
     @Override
     public void atualiza(){
-        System.out.printf("%s teve seu valor alterado!", this.observado.getNome());
+        System.out.printf("%s teve seu valor alterado!\n", this.observado.getNome());
     }
 
 }

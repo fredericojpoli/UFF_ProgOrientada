@@ -18,7 +18,6 @@ public class Operador extends Particula {
     public void setFatores(Numero A, Numero B) {
         this.fatorA = A;
         this.fatorB = B;
-        this.notificar();
     }
 
     

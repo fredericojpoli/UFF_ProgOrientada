@@ -35,5 +35,11 @@ public class Main {
         */
         Numero resultado = NPR.calcula(npr); // Interpreter/NPR.java
         System.out.println(resultado.getValor());
+        
+        /* Alteramos _a */
+        Controle.AlteraVariavel("_a", 10.0);
+        npr = NPR.traduz(expressao, expressao.length - 1);
+        resultado = NPR.calcula(npr); // Interpreter/NPR.java
+        System.out.println(resultado.getValor());
     }
 }
