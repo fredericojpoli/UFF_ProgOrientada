@@ -1,8 +1,19 @@
 package Exercicio06;
 
+import Exercicio06.Interpreter.Arvore;
+import Exercicio06.Interpreter.NPR;
 import Exercicio06.Modelo.*;
 
 public class Controle {
+    public static String expressao;
+    
+   
+    
+    public static Arvore geraArvore(){
+        String splited[] = Controle.expressao.split(" ");
+        Arvore npr = NPR.traduz(splited, splited.length - 1); // Interpreter/NPR.java
+        return npr;
+    }
     
     public static Particula inicializa(String nome, double valor) {
         Particula resultado = buscaVariavel(nome);
@@ -28,6 +39,12 @@ public class Controle {
                 Main.listaVariaveis.set(i, num);
             }
         }
+    }
+    
+     public static void Calcula(){
+        Arvore npr = geraArvore();
+        Numero resultado = NPR.calcula(npr); // Interpreter/NPR.java
+        System.out.println(resultado.getValor());
     }
     
 }

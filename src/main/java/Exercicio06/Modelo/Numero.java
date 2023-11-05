@@ -23,8 +23,10 @@ public class Numero extends Particula {
     } 
 
     public void setValor(double valor) {
-        this.valor = valor;
-        this.notificar();
+        if(this.valor != valor){
+            this.valor = valor;
+            this.notificar();
+        }
     }
     
 }

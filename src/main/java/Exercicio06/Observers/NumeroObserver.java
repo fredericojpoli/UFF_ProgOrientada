@@ -4,7 +4,6 @@
  */
 package Exercicio06.Observers;
 
-import Exercicio06.Modelo.Numero;
 
 /**
  *

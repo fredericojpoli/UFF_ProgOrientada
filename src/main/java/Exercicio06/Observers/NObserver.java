@@ -4,6 +4,8 @@
  */
 package Exercicio06.Observers;
 
+import Exercicio06.Controle;
+import Exercicio06.Interpreter.Arvore;
 import Exercicio06.Modelo.Numero;
 
 /**
@@ -19,5 +21,7 @@ public class NObserver implements NumeroObserver {
     @Override
     public void atualiza(){
         System.out.printf("%s teve seu valor alterado!\n", observado.getNome());
+        Controle.Calcula();
+        
     }
 }

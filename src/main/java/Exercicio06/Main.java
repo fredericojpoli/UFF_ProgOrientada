@@ -18,13 +18,11 @@ public class Main {
         Janela.printVariaveis();
         
         /* 1) Transformar um string em uma representação orientada a objetos da expressão */
-        String linha = "2 _a * _b + _b *";
-        String expressao[] = linha.split(" ");
-        Arvore npr = NPR.traduz(expressao, expressao.length - 1); // Interpreter/NPR.java
+        Controle.expressao = "2 _a * _b + _b *";
+        
                 
         /* (2 _a * _b + _b *) == ((2 * _a ) + _b) * _b */
-        Janela.printArvore(npr);
-        System.out.println();
+        
         
         /* 4) Calcular valor da expressão */
         /* 
@@ -33,13 +31,13 @@ public class Main {
         (10 + 2) * 2 
         (12) * 2 = 24
         */
-        Numero resultado = NPR.calcula(npr); // Interpreter/NPR.java
-        System.out.println(resultado.getValor());
+        Controle.Calcula();
+
         
         /* Alteramos _a */
         Controle.AlteraVariavel("_a", 10.0);
-        npr = NPR.traduz(expressao, expressao.length - 1);
-        resultado = NPR.calcula(npr); // Interpreter/NPR.java
-        System.out.println(resultado.getValor());
+        Controle.AlteraVariavel("_b", 4.0);
+        Controle.AlteraVariavel("_a", 5.0);
+        Controle.AlteraVariavel("_b", 0.0);
     }
 }
