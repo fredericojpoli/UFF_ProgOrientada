@@ -12,9 +12,6 @@ public class Controle {
     }
     
     
-    
-   
-    
     public static Arvore geraArvore(){
         String splited[] = Controle.expressao.split(" ");
         Arvore npr = NPR.traduz(splited, splited.length - 1); // Interpreter/NPR.java
