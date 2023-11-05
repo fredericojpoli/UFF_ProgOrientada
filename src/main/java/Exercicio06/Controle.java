@@ -6,6 +6,12 @@ import Exercicio06.Modelo.*;
 
 public class Controle {
     public static String expressao;
+
+    public static void setExpressao(String expressao) {
+        Controle.expressao = expressao;
+    }
+    
+    
     
    
     
@@ -37,6 +43,10 @@ public class Controle {
                 Numero num = Main.listaVariaveis.get(i);
                 num.setValor(valor);
                 Main.listaVariaveis.set(i, num);
+                break;
+            }
+            if(i == (Main.listaVariaveis.size() - 1)){
+                System.out.println("A variável não está na expressão!");
             }
         }
     }
@@ -44,7 +54,7 @@ public class Controle {
      public static void Calcula(){
         Arvore npr = geraArvore();
         Numero resultado = NPR.calcula(npr); // Interpreter/NPR.java
-        System.out.println(resultado.getValor());
+        System.out.printf("O resultado é igual a: %.1f\n",resultado.getValor());
     }
     
 }

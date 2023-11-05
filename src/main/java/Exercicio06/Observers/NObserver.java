@@ -5,7 +5,6 @@
 package Exercicio06.Observers;
 
 import Exercicio06.Controle;
-import Exercicio06.Interpreter.Arvore;
 import Exercicio06.Modelo.Numero;
 
 /**

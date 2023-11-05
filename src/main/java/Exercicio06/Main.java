@@ -1,6 +1,5 @@
 package Exercicio06;
 
-import Exercicio06.Interpreter.*;
 import Exercicio06.Modelo.*;
 import java.util.*;
 
@@ -18,7 +17,7 @@ public class Main {
         Janela.printVariaveis();
         
         /* 1) Transformar um string em uma representação orientada a objetos da expressão */
-        Controle.expressao = "2 _a * _b + _b *";
+        Controle.setExpressao("2 _a * _b + _b *");
         
                 
         /* (2 _a * _b + _b *) == ((2 * _a ) + _b) * _b */
@@ -34,10 +33,16 @@ public class Main {
         Controle.Calcula();
 
         
-        /* Alteramos _a */
+        /* Alteramos variaveis e o Observador faz o resultado ser recalculado. */
         Controle.AlteraVariavel("_a", 10.0);
+        /*_c não está na expressao*/
+        Controle.AlteraVariavel("_c", 100.0);
+        
+        /*Alteramos a expressao e as variaveis*/
+        Controle.setExpressao("2 _c * _a + _a *");
+        
         Controle.AlteraVariavel("_b", 4.0);
         Controle.AlteraVariavel("_a", 5.0);
-        Controle.AlteraVariavel("_b", 0.0);
+        Controle.AlteraVariavel("_c", 0.0);
     }
 }
