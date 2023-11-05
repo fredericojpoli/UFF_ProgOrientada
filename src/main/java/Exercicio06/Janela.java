@@ -1,5 +1,6 @@
 package Exercicio06;
 
+import Exercicio06.Interpreter.Arvore;
 import Exercicio06.Modelo.*;
 
 public abstract class Janela {

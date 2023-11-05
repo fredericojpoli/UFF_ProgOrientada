@@ -1,31 +1,49 @@
 package Exercicio06.Interpreter;
 
 import Exercicio06.Modelo.*;
+import Exercicio06.HandlerA.*;
 import Exercicio06.Visitor.*;
 
 public abstract class NPR {
     
-    public static Numero calcula(Arvore noh) {
-        
-        Calculadora calculadora = new Calculadora();
-        
-        /* Terminal? */
-        if (noh.conteudo.getClass() == Numero.class) {
-            return calculadora.visit(noh.conteudo);
+    public static Arvore traduz(String[] expressao, int indx) {
+
+        /* Chain Of Responsability */
+        HandlerA classificador = new VariavelHandler(new OperadorHandler(new ConstanteHandler(null)));
+
+        Arvore novoNoh = new Arvore();
+        novoNoh.conteudo = classificador.classifica(expressao[indx]);
+
+        /* Se não é um elemento terminal/folha */
+        if (novoNoh.conteudo.getClass() != Numero.class) {
+            novoNoh.direita = traduz(expressao, indx-1);
+            novoNoh.esquerda = traduz(expressao, indx-2);
         }
-        
-        if (noh.conteudo.getClass() == Operador.class) {
-            Numero fatorA = calcula(noh.esquerda);
-            Numero fatorB = calcula(noh.direita);
             
-            Operador operador = (Operador) noh.conteudo;
+        return novoNoh;
+
+    }
+    
+    public static Numero calcula(Arvore expressao) {
+        /*
+        // Não terminal
+        if (expressao.conteudo.getClass() != Numero.class) {
+            Numero fatorA = calcula(expressao.esquerda);
+            Numero fatorB = calcula(expressao.direita);
+            
+            Calculadora calculadora = new Calculadora();
+            
+            // pra eu acessar o set fatores preciso transformar em operacao pq não é atributo de particula
+            Operador operador = (Operador) expressao.conteudo; 
             operador.setFatores(fatorA, fatorB);
             
-            /* ta dando erro na hora de converter a operacao */
-            /*return calculadora.visit(operador.operacao);*/
-        }
-        return null;
+            // pra visitar precisava ser explicitamente do tipo OperadorTipo mas não rola pq é do tipo Operador
+            return calculadora.visit(operador);
             
+        } */
         
+        // Terminal
+        return ((Numero) expressao.conteudo);
     }
+    
 }

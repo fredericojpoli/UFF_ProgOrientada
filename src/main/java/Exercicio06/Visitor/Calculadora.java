@@ -1,12 +1,11 @@
 package Exercicio06.Visitor;
 
-import Exercicio06.Modelo.Operacoes.*;
 import Exercicio06.Modelo.*;
 
 public class Calculadora implements Visitor {
 
     @Override
-    public Numero visit(Adicao expressao) {
+    public Numero visit(OperadorAdicao expressao) {
         double valor = expressao.fatorA.getValor() + expressao.fatorB.getValor();
         Numero resultado = new Numero(Double.toString(valor), valor);
         
@@ -14,7 +13,7 @@ public class Calculadora implements Visitor {
     }
 
     @Override
-    public Numero visit(Subtracao expressao) {
+    public Numero visit(OperadorSubtracao expressao) {
         double valor = expressao.fatorA.getValor() - expressao.fatorB.getValor();
         Numero resultado = new Numero(Double.toString(valor), valor);
         
@@ -22,7 +21,7 @@ public class Calculadora implements Visitor {
     }
 
     @Override
-    public Numero visit(Multiplicacao expressao) {
+    public Numero visit(OperadorMultiplicacao expressao) {
         double valor = expressao.fatorA.getValor() * expressao.fatorB.getValor();
         Numero resultado = new Numero(Double.toString(valor), valor);
         
@@ -30,7 +29,7 @@ public class Calculadora implements Visitor {
     }
 
     @Override
-    public Numero visit(Divisao expressao) {
+    public Numero visit(OperadorDivisao expressao) {
         double valor = expressao.fatorA.getValor() / expressao.fatorB.getValor();
         Numero resultado = new Numero(Double.toString(valor), valor);
         
@@ -38,7 +37,7 @@ public class Calculadora implements Visitor {
     }
 
     @Override
-    public Numero visit(Potenciacao expressao) {
+    public Numero visit(OperadorPotenciacao expressao) {
         Numero expoente = expressao.fatorB;
         double valor = 1;
         double exp = expoente.getValor();
@@ -55,11 +54,6 @@ public class Calculadora implements Visitor {
         Numero resultado = new Numero(Double.toString(valor), valor);
         
         return resultado;
-    }
-
-    @Override
-    public Numero visit(Particula valor) {
-        return ((Numero) valor);
     }
 
 }

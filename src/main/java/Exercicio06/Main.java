@@ -1,7 +1,7 @@
 package Exercicio06;
 
-import Exercicio06.Modelo.*;
 import Exercicio06.Interpreter.*;
+import Exercicio06.Modelo.*;
 import java.util.*;
 
 public class Main {
@@ -20,12 +20,14 @@ public class Main {
         /* 1) Transformar um string em uma representação orientada a objetos da expressão */
         String linha = "2 _a * _b + _b *";
         String expressao[] = linha.split(" ");
-        Arvore npr = Tradutor.traduz(expressao, expressao.length - 1);
+        Arvore npr = NPR.traduz(expressao, expressao.length - 1);
                 
-        /* "2 _a * _b + _b *" == ((2 * _a ) + _b) * _b */
+        /* (2 _a * _b + _b *) == ((2 * _a ) + _b) * _b */
         Janela.printArvore(npr);
         System.out.println();
         
         /* 4) Calcular valor da expressão */
+        /*Numero resultado = NPR.calcula(npr);
+        System.out.println(resultado.getValor());*/
     }
 }

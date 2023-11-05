@@ -1,19 +1,18 @@
 package Exercicio06.Modelo;
 
-import Exercicio06.Modelo.Operacoes.Operacao;
+import Exercicio06.Visitor.*;
 
 public class Operador extends Particula {
-            
-    public Operacao operacao;
     
-    public Operador(String nome, Operacao operacao) {
+    public Numero fatorA;
+    public Numero fatorB;
+    
+    public Operador(String nome) {
         super(nome);
-        this.operacao = operacao;
-    }
-    
-    public void setFatores(Numero fatorA, Numero fatorB) {
-        operacao.fatorA = fatorA;
-        operacao.fatorB = fatorB;
     }
 
+    public void setFatores(Numero fatorA, Numero fatorB) {
+        this.fatorA = fatorA;
+        this.fatorB = fatorB;
+    }
 }
